@@ -345,8 +345,8 @@ html,body{font-family:Roboto,"Helvetica Neue",Arial,sans-serif}
 <main id="tradeView">
 <div class="market-tabs" id="marketTabs"><button>◎ Matches/Differs</button><button class="active">▦ Even/Odd</button><button>↕ Over/Under</button><button>⌁ Rise/Fall</button></div>
 <section class="chart-card">
-<div class="chart-head"><div class="asset">▥ &nbsp;<select id="marketSelect" aria-label="Market" style="background:transparent;color:inherit;border:0;outline:0;font-weight:750;font-size:inherit"><option value="BTC-USD">BTC / USD</option><option value="ETH-USD">ETH / USD</option><option value="SOL-USD">SOL / USD</option><option value="XRP-USD">XRP / USD</option></select><div class="price"><span id="price">Waiting for feed…</span> &nbsp;<span id="changePct" style="color:#20c66b">--</span></div><div class="market-status" id="feedStatus"><i></i><span>Connecting to independent feed</span></div></div><span class="asset">100%</span></div>
-<svg class="chart" viewBox="0 0 700 260" preserveAspectRatio="none" aria-label="Live Coinbase market price chart"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#4388f7" stop-opacity=".18"/><stop offset="1" stop-color="#4388f7" stop-opacity="0"/></linearGradient></defs><g stroke="#293044" stroke-width="1"><path d="M0 60H700M0 110H700M0 160H700M0 210H700"/><path d="M100 0V260M250 0V260M400 0V260M550 0V260"/></g><path id="area" d="M0 170 L25 145 L48 160 L70 115 L92 130 L115 90 L140 120 L160 95 L185 130 L210 100 L235 125 L260 90 L285 112 L310 75 L335 105 L360 80 L385 125 L410 100 L435 135 L460 112 L485 145 L510 110 L535 130 L560 90 L585 115 L610 80 L635 105 L660 88 L700 100 L700 260 L0 260Z" fill="url(#fill)"/><path id="line" d="M0 170 L25 145 L48 160 L70 115 L92 130 L115 90 L140 120 L160 95 L185 130 L210 100 L235 125 L260 90 L285 112 L310 75 L335 105 L360 80 L385 125 L410 100 L435 135 L460 112 L485 145 L510 110 L535 130 L560 90 L585 115 L610 80 L635 105 L660 88 L700 100" fill="none" stroke="#c7d0e2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<div class="chart-head"><div class="asset">▥ &nbsp;<select id="marketSelect" aria-label="Market" style="background:transparent;color:inherit;border:0;outline:0;font-weight:750;font-size:inherit"><option value="BTC-USD">BTC / USD</option><option value="ETH-USD">ETH / USD</option><option value="SOL-USD">SOL / USD</option><option value="XRP-USD">XRP / USD</option></select><div class="price"><span id="price">Waiting for feed…</span> &nbsp;<span id="changePct" style="color:#20c66b">--</span></div><div class="market-status" id="feedStatus"><i></i><span>Connecting to Deriv feed</span></div></div><span class="asset">100%</span></div>
+<svg class="chart" viewBox="0 0 700 260" preserveAspectRatio="none" aria-label="Live Deriv market price chart"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#4388f7" stop-opacity=".18"/><stop offset="1" stop-color="#4388f7" stop-opacity="0"/></linearGradient></defs><g stroke="#293044" stroke-width="1"><path d="M0 60H700M0 110H700M0 160H700M0 210H700"/><path d="M100 0V260M250 0V260M400 0V260M550 0V260"/></g><path id="area" d="M0 170 L25 145 L48 160 L70 115 L92 130 L115 90 L140 120 L160 95 L185 130 L210 100 L235 125 L260 90 L285 112 L310 75 L335 105 L360 80 L385 125 L410 100 L435 135 L460 112 L485 145 L510 110 L535 130 L560 90 L585 115 L610 80 L635 105 L660 88 L700 100 L700 260 L0 260Z" fill="url(#fill)"/><path id="line" d="M0 170 L25 145 L48 160 L70 115 L92 130 L115 90 L140 120 L160 95 L185 130 L210 100 L235 125 L260 90 L285 112 L310 75 L335 105 L360 80 L385 125 L410 100 L435 135 L460 112 L485 145 L510 110 L535 130 L560 90 L585 115 L610 80 L635 105 L660 88 L700 100" fill="none" stroke="#c7d0e2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
 <div class="chart-label" id="chartPrice">9562.38</div><div class="chart-controls"><button>＋</button><button>－</button></div>
 </section>
 <div class="digits"><div class="digit">0<small>9.2%</small></div><div class="digit">1<small>9.2%</small></div><div class="digit">2<small>9.6%</small></div><div class="digit hot">3<small>9.0%</small></div><div class="digit">4<small>9.4%</small></div><div class="digit good">5<small>12.4%</small></div><div class="digit">6<small>10.6%</small></div><div class="digit">7<small>9.6%</small></div><div class="digit">8<small>12.0%</small></div><div class="digit">9<small>9.0%</small></div></div>
@@ -363,7 +363,7 @@ html,body{font-family:Roboto,"Helvetica Neue",Arial,sans-serif}
 <nav class="bottom"><button class="navitem active" data-view="trade"><span class="navicon">▥</span>Trade</button><button class="navitem ai" id="aiOpen"><span class="ai-orb">✧</span>AI</button><button class="navitem" data-view="positions"><span class="navicon">◷</span>Positions</button></nav>
 </div>
 <div class="veil" id="menuVeil"><aside class="drawer"><div class="drawer-head"><button class="close" data-close="menuVeil">×</button>Menu <span style="font-size:18px;font-weight:500">🇬🇧 EN</span></div><div class="profile"><div class="avatar">N</div><div><strong>NovaX Trader</strong><p>Sign in to your account</p></div></div><button class="menuitem"><span class="mi">⚙</span>Account settings <span style="margin-left:auto">⌄</span></button><button class="menuitem" id="menuDeposit"><span class="mi">⊙</span>Deposit <span style="margin-left:auto">›</span></button><button class="menuitem"><span class="mi">⇧</span>Withdraw <span style="margin-left:auto">›</span></button><button class="menuitem" id="menuHistory"><span class="mi">◴</span>History <span style="margin-left:auto">›</span></button><button class="menuitem highlight"><span class="mi">♔</span>Refer & Earn</button><button class="menuitem" id="themeToggle" aria-pressed="false"><span class="mi">☾</span><span id="themeLabel">Dark theme</span><span class="toggle" id="themeSwitch"></span></button><button class="menuitem"><span class="mi">ⓘ</span>Help Centre</button><button class="menuitem"><span class="mi">♢</span>Responsible Trading <span style="margin-left:auto">›</span></button><button class="menuitem" id="liveChatOpen"><span class="mi">▢</span>Live Chat <span style="margin-left:auto">›</span></button><button class="menuitem logout"><span class="mi">⇥</span>Log out</button><p class="muted-note" style="padding:0 28px 24px">NovaX independent platform preview</p></aside></div>
-<div class="veil" id="aiVeil"><section class="modal"><div class="modal-head"><div style="display:flex;align-items:center;gap:16px"><div class="payicon">✧</div><h2>Entry Scanner</h2></div><button class="close" data-close="aiVeil">×</button></div><div class="info">Analyze the selected Coinbase spot market using live prices collected in this session. The scanner reports measured momentum and volatility, not guaranteed outcomes or trade instructions.</div><label class="fieldlabel">Analysis type</label><select class="select" id="scanMode"><option value="overview">Full market analysis</option><option value="momentum">Trend &amp; momentum</option><option value="volatility">Volatility scan</option><option value="range">Price range scan</option></select><div class="scanrow"><span id="scanStatus">Waiting for live market data</span><b id="scanCount">0/13</b></div><div class="progress"><span id="scanProgress"></span></div><button class="primary" id="scanBtn">⌕ &nbsp; Analyze Live Market</button><button class="secondary" id="botBtn">Start Live Monitoring</button><div id="scanResults" class="scan-results" aria-live="polite"><div class="scan-result"><span>Market</span><b id="scanAsset">Waiting for feed</b></div><div class="scan-result"><span>Trend bias</span><b id="scanTrend">—</b></div><div class="scan-result"><span>Volatility</span><b id="scanVolatility">—</b></div><div class="scan-result"><span>Observed range</span><b id="scanRange">—</b></div><div class="scan-result"><span>Samples</span><b id="scanSamples">0</b></div></div><p class="muted-note">Analysis is calculated from recent Coinbase ticker observations in this browser session. It is not an AI prediction, a validated trading signal, or an order execution service.</p></section></div>
+<div class="veil" id="aiVeil"><section class="modal"><div class="modal-head"><div style="display:flex;align-items:center;gap:16px"><div class="payicon">✧</div><h2>Entry Scanner</h2></div><button class="close" data-close="aiVeil">×</button></div><div class="info">Analyze the selected Deriv market using live prices collected in this session. The scanner reports measured momentum and volatility, not guaranteed outcomes or trade instructions.</div><label class="fieldlabel">Analysis type</label><select class="select" id="scanMode"><option value="overview">Full market analysis</option><option value="momentum">Trend &amp; momentum</option><option value="volatility">Volatility scan</option><option value="range">Price range scan</option></select><div class="scanrow"><span id="scanStatus">Waiting for live market data</span><b id="scanCount">0/13</b></div><div class="progress"><span id="scanProgress"></span></div><button class="primary" id="scanBtn">⌕ &nbsp; Analyze Live Market</button><button class="secondary" id="botBtn">Start Live Monitoring</button><div id="scanResults" class="scan-results" aria-live="polite"><div class="scan-result"><span>Market</span><b id="scanAsset">Waiting for feed</b></div><div class="scan-result"><span>Trend bias</span><b id="scanTrend">—</b></div><div class="scan-result"><span>Volatility</span><b id="scanVolatility">—</b></div><div class="scan-result"><span>Observed range</span><b id="scanRange">—</b></div><div class="scan-result"><span>Samples</span><b id="scanSamples">0</b></div></div><p class="muted-note">Analysis is calculated from recent Deriv tick observations in this browser session. It is not an AI prediction, a validated trading signal, or an order execution service.</p></section></div>
 <div class="veil" id="depositVeil"><section class="modal"><div class="modal-head"><div><h2>Deposit Funds</h2><p class="sub">Choose your payment method</p></div><button class="close" data-close="depositVeil">×</button></div><button class="paymethod" data-pay="M-Pesa"><span class="payicon">▣</span><span><strong>M-Pesa</strong><small>Mobile money</small></span><span class="arrow">↗</span></button><button class="paymethod" data-pay="USDT (TRC20)"><span class="payicon" style="color:#27b58a">₮</span><span><strong>USDT (TRC20)</strong><small>Cryptocurrency</small></span><span class="arrow">↗</span></button><button class="paymethod" data-pay="Card"><span class="payicon">▤</span><span><strong>Card</strong><small>Visa, Mastercard</small></span><span class="arrow">↗</span></button><div class="secure"><span>●</span> Secure &nbsp; <span>●</span> Provider confirmation required &nbsp; <span>●</span> Support</div></section></div>
 <div class="veil" id="payVeil"><section class="modal"><div class="modal-head"><div><h2 id="payTitle">Deposit</h2><p class="sub" id="paySub">Payment setup</p></div><button class="close" data-close="payVeil">×</button></div><label class="fieldlabel">Amount (USD)</label><input class="amount" id="payAmount" type="number" min="1" placeholder="Enter amount"><div id="phoneWrap"><label class="fieldlabel">Phone number (for M-Pesa)</label><input class="amount" id="phone" placeholder="+254 7XX XXX XXX"></div><p class="muted-note">This preview does not collect payment details or process deposits. A verified payment provider must be integrated before enabling real deposits.</p><button class="primary" id="continuePay">Continue</button></section></div>
 
@@ -465,90 +465,111 @@ $('#chatForm').addEventListener('submit',e=>{
 
 updatePayout();
 
-/* Independent live ticker: Coinbase Exchange public market-data WebSocket.
-   No Deriv endpoints, credentials, or proprietary synthetic indices are used. */
+/* Deriv public WebSocket market-data feed. No account token is required for public ticks. */
 const marketSelect=$('#marketSelect');
 const feedStatus=$('#feedStatus');
 const chartHistory=[];
 const digitCounts=Array(10).fill(0);
-let feedSocket=null,feedRetry=null,feedRetryDelay=1500,lastPrice=null,selectedProduct=marketSelect.value;
+const DERIV_WS='wss://api.derivws.com/trading/v1/options/ws/public';
+let feedSocket=null,feedRetry=null,feedRetryDelay=1500,lastPrice=null;
+let selectedSymbol='1HZ10V',activeSymbols=[],tickSubscriptionId=null,historyReady=false;
+let reqCounter=10;
 function setFeedStatus(label,live=false){
  feedStatus.classList.toggle('live',live);
  feedStatus.querySelector('span').textContent=label;
+}
+function sendDeriv(payload){
+ if(feedSocket&&feedSocket.readyState===WebSocket.OPEN)feedSocket.send(JSON.stringify(payload));
 }
 function renderLiveChart(){
  if(chartHistory.length<2)return;
  const vals=chartHistory.slice(-70),min=Math.min(...vals),max=Math.max(...vals),span=max-min||1;
  const pts=vals.map((v,i)=>[i/(vals.length-1)*700,235-((v-min)/span)*185]);
  const path=pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
- $('#line').setAttribute('d',path);
- $('#area').setAttribute('d',path+' L700 260 L0 260Z');
+ $('#line').setAttribute('d',path);$('#area').setAttribute('d',path+' L700 260 L0 260Z');
 }
 function renderDigitStats(){
- const nodes=$('.digit');
- const total=digitCounts.reduce((a,b)=>a+b,0);
+ const nodes=$('.digit'),total=digitCounts.reduce((a,b)=>a+b,0);
  nodes.forEach((node,i)=>{
-  const pct=total?digitCounts[i]/total*100:10;
-  node.querySelector('small').textContent=pct.toFixed(1)+'%';
-  node.classList.toggle('hot',i===Number(String(lastPrice||'').replace('.','').slice(-1)));
+  node.querySelector('small').textContent=(total?digitCounts[i]/total*100:10).toFixed(1)+'%';
+  node.classList.toggle('hot',i===Number(String(lastPrice??'').replace('.','').slice(-1)));
  });
 }
-function handleTicker(data){
- if(data.type!=='ticker'||data.product_id!==selectedProduct||!data.price)return;
- const price=Number(data.price);
- if(!Number.isFinite(price))return;
- const prior=lastPrice;
- lastPrice=price;
- chartHistory.push(price);if(chartHistory.length>160)chartHistory.shift();
- const formatted=price.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:Math.min(8,Math.max(2,(String(data.price).split('.')[1]||'').length))});
- $('#price').textContent=formatted;
- $('#chartPrice').textContent=formatted;
- if(data.open_24h){
-  const pct=(price/Number(data.open_24h)-1)*100;
+function updateDerivTick(tick){
+ if(!tick||tick.symbol!==selectedSymbol||tick.quote===undefined)return;
+ const price=Number(tick.quote);if(!Number.isFinite(price))return;
+ lastPrice=price;chartHistory.push(price);if(chartHistory.length>240)chartHistory.shift();
+ const decimals=Number.isInteger(Number(tick.pip_size))?Number(tick.pip_size):Math.min(8,Math.max(2,(String(tick.quote).split('.')[1]||'').length));
+ const formatted=price.toLocaleString('en-US',{minimumFractionDigits:Math.min(decimals,8),maximumFractionDigits:Math.min(decimals,8)});
+ $('#price').textContent=formatted;$('#chartPrice').textContent=formatted;
+ if(chartHistory.length>1){
+  const pct=(price/chartHistory[0]-1)*100;
   $('#changePct').textContent=(pct>=0?'+':'')+pct.toFixed(2)+'%';
   $('#changePct').style.color=pct>=0?'#20c66b':'#fa4055';
+  const digit=Number(String(tick.quote).replace('.','').slice(-1));
+  if(Number.isInteger(digit)&&digit>=0&&digit<=9)digitCounts[digit]++;
  }
- if(prior!==null){
-  const finalDigit=Number(String(data.price).replace('.','').slice(-1));
-  if(Number.isInteger(finalDigit)&&finalDigit>=0&&finalDigit<=9)digitCounts[finalDigit]++;
- }
- renderLiveChart();renderDigitStats();
- setFeedStatus('LIVE · Coinbase Exchange',true);
+ renderLiveChart();renderDigitStats();setFeedStatus('LIVE · Deriv · '+selectedSymbol,true);
+}
+function populateDerivMarkets(list){
+ activeSymbols=list.filter(item=>item&&item.symbol&&
+  (String(item.market||'').toLowerCase().includes('synthetic')||
+   String(item.submarket||'').toLowerCase().includes('continuous')||
+   /volatility|crash|boom|step| range break/i.test(item.display_name||'')));
+ if(!activeSymbols.length)activeSymbols=list.filter(item=>item&&item.symbol);
+ const preferred=activeSymbols.find(item=>item.symbol==='1HZ10V')||activeSymbols.find(item=>/volatility 10 \(1s\)/i.test(item.display_name||''))||activeSymbols[0];
+ if(!preferred){setFeedStatus('No Deriv markets returned');return;}
+ const current=activeSymbols.find(item=>item.symbol===selectedSymbol);
+ const chosen=current||preferred;
+ marketSelect.innerHTML='';
+ activeSymbols.forEach(item=>{
+  const option=document.createElement('option');option.value=item.symbol;
+  option.textContent=item.display_name||item.symbol;marketSelect.appendChild(option);
+ });
+ selectedSymbol=chosen.symbol;marketSelect.value=selectedSymbol;
+ $('#assetName').textContent=chosen.display_name||chosen.symbol;
+ requestMarketHistoryAndTicks();
+}
+function requestMarketHistoryAndTicks(){
+ historyReady=false;tickSubscriptionId=null;lastPrice=null;chartHistory.length=0;digitCounts.fill(0);
+ $('#price').textContent='Loading Deriv ticks…';$('#chartPrice').textContent='--';$('#changePct').textContent='--';
+ $('.digit small').forEach(el=>el.textContent='10.0%');
+ sendDeriv({forget_all:'ticks'});
+ sendDeriv({ticks_history:selectedSymbol,count:100,end:'latest',style:'ticks',req_id:++reqCounter});
 }
 function connectMarketFeed(){
  if(feedSocket&&(feedSocket.readyState===WebSocket.OPEN||feedSocket.readyState===WebSocket.CONNECTING))return;
- setFeedStatus('Connecting to Coinbase Exchange…');
+ setFeedStatus('Connecting to Deriv…');
  try{
-  feedSocket=new WebSocket('wss://ws-feed.exchange.coinbase.com');
-  feedSocket.onopen=()=>{
-   feedRetryDelay=1500;
-   feedSocket.send(JSON.stringify({type:'subscribe',product_ids:[selectedProduct],channels:['ticker']}));
-   setFeedStatus('Subscribed · '+selectedProduct,true);
-  };
+  feedSocket=new WebSocket(DERIV_WS);
+  feedSocket.onopen=()=>{feedRetryDelay=1500;setFeedStatus('Connected · loading Deriv markets');sendDeriv({active_symbols:'brief',req_id:1});};
   feedSocket.onmessage=event=>{
-   try{const msg=JSON.parse(event.data);if(msg.type==='ticker')handleTicker(msg);else if(msg.type==='error')setFeedStatus('Feed error · retrying');}
-   catch(error){console.warn('Market feed message could not be parsed',error);}
+   try{
+    const msg=JSON.parse(event.data);
+    if(msg.error){setFeedStatus('Deriv: '+(msg.error.message||'request error'));return;}
+    if(msg.msg_type==='active_symbols'){populateDerivMarkets(msg.active_symbols||[]);return;}
+    if(msg.msg_type==='history'&&msg.history){
+     (msg.history.prices||[]).forEach(p=>{const n=Number(p);if(Number.isFinite(n))chartHistory.push(n);});
+     if(chartHistory.length>240)chartHistory.splice(0,chartHistory.length-240);
+     if(chartHistory.length){lastPrice=chartHistory[chartHistory.length-1];renderLiveChart();}
+     historyReady=true;sendDeriv({ticks:selectedSymbol,subscribe:1,req_id:++reqCounter});return;
+    }
+    if(msg.msg_type==='tick'&&msg.tick){
+     if(msg.subscription)tickSubscriptionId=msg.subscription.id;
+     updateDerivTick(msg.tick);
+    }
+   }catch(error){console.warn('Deriv message parse error',error);}
   };
-  feedSocket.onerror=()=>setFeedStatus('Feed connection issue · retrying');
+  feedSocket.onerror=()=>setFeedStatus('Deriv connection issue · retrying');
   feedSocket.onclose=()=>{
-   setFeedStatus('Disconnected · reconnecting');
-   clearTimeout(feedRetry);
-   feedRetry=setTimeout(connectMarketFeed,feedRetryDelay);
-   feedRetryDelay=Math.min(feedRetryDelay*2,20000);
+   setFeedStatus('Disconnected · reconnecting');clearTimeout(feedRetry);
+   feedRetry=setTimeout(connectMarketFeed,feedRetryDelay);feedRetryDelay=Math.min(feedRetryDelay*2,20000);
   };
- }catch(error){
-  setFeedStatus('Feed unavailable · retrying');
-  clearTimeout(feedRetry);feedRetry=setTimeout(connectMarketFeed,feedRetryDelay);
- }
+ }catch(error){setFeedStatus('Deriv unavailable · retrying');clearTimeout(feedRetry);feedRetry=setTimeout(connectMarketFeed,feedRetryDelay);}
 }
 marketSelect.addEventListener('change',()=>{
- selectedProduct=marketSelect.value;
- lastPrice=null;chartHistory.length=0;digitCounts.fill(0);
- $('#price').textContent='Waiting for feed…';$('#chartPrice').textContent='--';
- $('#changePct').textContent='--';
- $('.digit small').forEach(el=>el.textContent='10.0%');
- if(feedSocket){feedSocket.onclose=null;feedSocket.close();feedSocket=null}
- clearTimeout(feedRetry);connectMarketFeed();
+ selectedSymbol=marketSelect.value;
+ if(feedSocket&&feedSocket.readyState===WebSocket.OPEN)requestMarketHistoryAndTicks();
 });
 connectMarketFeed();
 
