@@ -527,7 +527,6 @@ function populateDerivMarkets(list){
   option.textContent=item.display_name||item.symbol;marketSelect.appendChild(option);
  });
  selectedSymbol=chosen.symbol;marketSelect.value=selectedSymbol;
- $('#assetName').textContent=chosen.display_name||chosen.symbol;
  requestMarketHistoryAndTicks();
 }
 function requestMarketHistoryAndTicks(){
