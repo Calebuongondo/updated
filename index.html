@@ -331,6 +331,8 @@ html,body{font-family:Roboto,"Helvetica Neue",Arial,sans-serif}
   .bottom{bottom:18px;border-radius:0 0 20px 20px}
 }
 
+
+.scan-results{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}.scan-result{min-width:0;background:var(--panel2);border:1px solid var(--line);border-radius:13px;padding:12px}.scan-result span{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}.scan-result b{display:block;font-size:15px;overflow-wrap:anywhere}.scan-result:first-child{grid-column:1/-1}body.light-theme .scan-result{background:#f0f3f8;border-color:#dce2ed}
 </style>
 </head>
 <body>
@@ -361,7 +363,7 @@ html,body{font-family:Roboto,"Helvetica Neue",Arial,sans-serif}
 <nav class="bottom"><button class="navitem active" data-view="trade"><span class="navicon">▥</span>Trade</button><button class="navitem ai" id="aiOpen"><span class="ai-orb">✧</span>AI</button><button class="navitem" data-view="positions"><span class="navicon">◷</span>Positions</button></nav>
 </div>
 <div class="veil" id="menuVeil"><aside class="drawer"><div class="drawer-head"><button class="close" data-close="menuVeil">×</button>Menu <span style="font-size:18px;font-weight:500">🇬🇧 EN</span></div><div class="profile"><div class="avatar">N</div><div><strong>NovaX Trader</strong><p>Sign in to your account</p></div></div><button class="menuitem"><span class="mi">⚙</span>Account settings <span style="margin-left:auto">⌄</span></button><button class="menuitem" id="menuDeposit"><span class="mi">⊙</span>Deposit <span style="margin-left:auto">›</span></button><button class="menuitem"><span class="mi">⇧</span>Withdraw <span style="margin-left:auto">›</span></button><button class="menuitem" id="menuHistory"><span class="mi">◴</span>History <span style="margin-left:auto">›</span></button><button class="menuitem highlight"><span class="mi">♔</span>Refer & Earn</button><button class="menuitem" id="themeToggle" aria-pressed="false"><span class="mi">☾</span><span id="themeLabel">Dark theme</span><span class="toggle" id="themeSwitch"></span></button><button class="menuitem"><span class="mi">ⓘ</span>Help Centre</button><button class="menuitem"><span class="mi">♢</span>Responsible Trading <span style="margin-left:auto">›</span></button><button class="menuitem" id="liveChatOpen"><span class="mi">▢</span>Live Chat <span style="margin-left:auto">›</span></button><button class="menuitem logout"><span class="mi">⇥</span>Log out</button><p class="muted-note" style="padding:0 28px 24px">NovaX independent platform preview</p></aside></div>
-<div class="veil" id="aiVeil"><section class="modal"><div class="modal-head"><div style="display:flex;align-items:center;gap:16px"><div class="payicon">✧</div><h2>Entry Scanner</h2></div><button class="close" data-close="aiVeil">×</button></div><div class="info">Choose the market category you want to scan. The scanner will analyze available historical data and highlight patterns for review. <b>Signals are not guarantees of future results.</b></div><label class="fieldlabel">Market</label><select class="select"><option>Even / Odd</option><option>Matches / Differs</option><option>Over / Under</option><option>Rise / Fall</option></select><div class="scanrow"><span id="scanStatus">Ready to scan</span><b id="scanCount">0/13</b></div><div class="progress"><span id="scanProgress"></span></div><button class="primary" id="scanBtn">⌕ &nbsp; Deep Scan for Best Market</button><button class="secondary" id="botBtn">Load Deep Scanner Bot</button><p class="muted-note">Scanner interface preview. Live market prices are available, but no validated signal engine or trade recommendations are connected.</p></section></div>
+<div class="veil" id="aiVeil"><section class="modal"><div class="modal-head"><div style="display:flex;align-items:center;gap:16px"><div class="payicon">✧</div><h2>Entry Scanner</h2></div><button class="close" data-close="aiVeil">×</button></div><div class="info">Analyze the selected Coinbase spot market using live prices collected in this session. The scanner reports measured momentum and volatility, not guaranteed outcomes or trade instructions.</div><label class="fieldlabel">Analysis type</label><select class="select" id="scanMode"><option value="overview">Full market analysis</option><option value="momentum">Trend &amp; momentum</option><option value="volatility">Volatility scan</option><option value="range">Price range scan</option></select><div class="scanrow"><span id="scanStatus">Waiting for live market data</span><b id="scanCount">0/13</b></div><div class="progress"><span id="scanProgress"></span></div><button class="primary" id="scanBtn">⌕ &nbsp; Analyze Live Market</button><button class="secondary" id="botBtn">Start Live Monitoring</button><div id="scanResults" class="scan-results" aria-live="polite"><div class="scan-result"><span>Market</span><b id="scanAsset">Waiting for feed</b></div><div class="scan-result"><span>Trend bias</span><b id="scanTrend">—</b></div><div class="scan-result"><span>Volatility</span><b id="scanVolatility">—</b></div><div class="scan-result"><span>Observed range</span><b id="scanRange">—</b></div><div class="scan-result"><span>Samples</span><b id="scanSamples">0</b></div></div><p class="muted-note">Analysis is calculated from recent Coinbase ticker observations in this browser session. It is not an AI prediction, a validated trading signal, or an order execution service.</p></section></div>
 <div class="veil" id="depositVeil"><section class="modal"><div class="modal-head"><div><h2>Deposit Funds</h2><p class="sub">Choose your payment method</p></div><button class="close" data-close="depositVeil">×</button></div><button class="paymethod" data-pay="M-Pesa"><span class="payicon">▣</span><span><strong>M-Pesa</strong><small>Mobile money</small></span><span class="arrow">↗</span></button><button class="paymethod" data-pay="USDT (TRC20)"><span class="payicon" style="color:#27b58a">₮</span><span><strong>USDT (TRC20)</strong><small>Cryptocurrency</small></span><span class="arrow">↗</span></button><button class="paymethod" data-pay="Card"><span class="payicon">▤</span><span><strong>Card</strong><small>Visa, Mastercard</small></span><span class="arrow">↗</span></button><div class="secure"><span>●</span> Secure &nbsp; <span>●</span> Provider confirmation required &nbsp; <span>●</span> Support</div></section></div>
 <div class="veil" id="payVeil"><section class="modal"><div class="modal-head"><div><h2 id="payTitle">Deposit</h2><p class="sub" id="paySub">Payment setup</p></div><button class="close" data-close="payVeil">×</button></div><label class="fieldlabel">Amount (USD)</label><input class="amount" id="payAmount" type="number" min="1" placeholder="Enter amount"><div id="phoneWrap"><label class="fieldlabel">Phone number (for M-Pesa)</label><input class="amount" id="phone" placeholder="+254 7XX XXX XXX"></div><p class="muted-note">This preview does not collect payment details or process deposits. A verified payment provider must be integrated before enabling real deposits.</p><button class="primary" id="continuePay">Continue</button></section></div>
 
@@ -384,8 +386,41 @@ const stake=$('#stake');function updatePayout(){const v=Math.max(0,Number(stake.
 $$('.trade-action').forEach(b=>b.onclick=()=>toast('Demo only: '+b.dataset.side+' order was not placed. Connect an execution provider to enable trading.'));
 $$('.paymethod').forEach(b=>b.onclick=()=>{close('depositVeil');$('#payTitle').textContent='Deposit with '+b.dataset.pay;$('#paySub').textContent='Enter the amount you want to deposit';$('#phoneWrap').style.display=b.dataset.pay==='M-Pesa'?'block':'none';open('payVeil')});
 $('#continuePay').onclick=()=>toast('Payments are not enabled in this prototype. No money has been charged.');
-$('#scanBtn').onclick=()=>{let i=0;$('#scanBtn').disabled=true;$('#scanStatus').textContent='Scanning demo sample…';const timer=setInterval(()=>{i++;$('#scanCount').textContent=i+'/13';$('#scanProgress').style.width=(i/13*100)+'%';if(i>=13){clearInterval(timer);$('#scanStatus').textContent='Demo scan complete';$('#scanBtn').disabled=false;$('#scanBtn').textContent='Scan again';toast('Demo scan complete — no live signal source connected.')}},180)};
-$('#botBtn').onclick=()=>toast('Scanner bot will be available after a verified data source is connected.');
+function runMarketAnalysis(){
+ const prices=chartHistory.slice(-80),mode=$('#scanMode').value;
+ $('#scanAsset').textContent=selectedProduct.replace('-',' / ');
+ $('#scanSamples').textContent=String(prices.length);
+ if(prices.length<12){
+  $('#scanStatus').textContent='Collecting more live samples';
+  $('#scanCount').textContent=prices.length+'/12 minimum';
+  $('#scanProgress').style.width=Math.min(100,prices.length/12*100)+'%';
+  $('#scanTrend').textContent='Insufficient data';$('#scanVolatility').textContent='Insufficient data';$('#scanRange').textContent='—';return false;
+ }
+ const first=prices[0],last=prices[prices.length-1];
+ const changes=prices.slice(1).map((p,i)=>(p-prices[i])/prices[i]*100);
+ const mean=changes.reduce((a,b)=>a+b,0)/changes.length;
+ const volatility=Math.sqrt(changes.reduce((a,b)=>a+(b-mean)**2,0)/changes.length);
+ const trendPct=(last/first-1)*100,trend=trendPct>0.08?'Upward':trendPct<-.08?'Downward':'Sideways';
+ const vol=volatility>0.08?'High':volatility>0.025?'Moderate':'Low';
+ const min=Math.min(...prices),max=Math.max(...prices);
+ const fmt=v=>v.toLocaleString('en-US',{maximumFractionDigits:Math.min(8,Math.max(2,(String(v).split('.')[1]||'').length))});
+ $('#scanTrend').textContent=mode==='volatility'?'Not selected':trend+' ('+(trendPct>=0?'+':'')+trendPct.toFixed(3)+'%)';
+ $('#scanVolatility').textContent=mode==='momentum'?'Not selected':vol+' · '+volatility.toFixed(4)+'% avg tick move';
+ $('#scanRange').textContent=mode==='momentum'?'Not selected':fmt(min)+' – '+fmt(max);
+ $('#scanStatus').textContent='Analysis complete · '+new Date().toLocaleTimeString();
+ $('#scanCount').textContent='13/13';$('#scanProgress').style.width='100%';return true;
+}
+$('#scanBtn').onclick=()=>{
+ $('#scanStatus').textContent='Analyzing live observations…';$('#scanCount').textContent='0/13';$('#scanProgress').style.width='0%';
+ let step=0;$('#scanBtn').disabled=true;
+ const timer=setInterval(()=>{step++;$('#scanCount').textContent=step+'/13';$('#scanProgress').style.width=(step/13*100)+'%';if(step>=13){clearInterval(timer);runMarketAnalysis();$('#scanBtn').disabled=false;}},75);
+};
+let scannerMonitor=null;
+$('#botBtn').onclick=()=>{
+ if(scannerMonitor){clearInterval(scannerMonitor);scannerMonitor=null;$('#botBtn').textContent='Start Live Monitoring';toast('Live market monitoring paused');return;}
+ runMarketAnalysis();scannerMonitor=setInterval(runMarketAnalysis,5000);
+ $('#botBtn').textContent='Pause Live Monitoring';toast('Live market monitoring started · refreshes every 5 seconds');
+};
 $('#balanceBtn').onclick=()=>toast('Demo wallet balance: $0.00');
 
 
