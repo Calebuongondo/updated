@@ -178,6 +178,115 @@ body.light-theme .chatlog{background:#f0f3f8;border-color:#dce2ed}
 body.light-theme .chatmsg:not(.mine){background:#e1e7f0;color:#26334b}
 body.light-theme .chatcomposer input{background:#f0f3f8;color:#1c2434;border-color:#dce2ed}
 
+
+/* Complete screen styling, aligned to the supplied 691px reference capture */
+:root{--font-ui:Roboto,"Helvetica Neue",Arial,sans-serif}
+html,body,button,input,select{font-family:var(--font-ui)}
+@media(max-width:520px){
+ .app{max-width:100%;padding-bottom:104px}
+ .top{height:82px;gap:7px;padding:9px 10px}
+ .top #menuOpen{width:28px;min-width:28px;font-size:22px}
+ .logo{width:44px;min-width:44px;height:52px;border-radius:16px;font-size:24px}
+ .balance{height:52px;flex:1;min-width:0;padding:4px 7px;gap:5px;font-size:14px;overflow:hidden}
+ .balance .coin{width:30px;min-width:30px;height:42px;border-radius:12px}
+ .deposit{height:52px;min-width:98px;padding:0 12px;font-size:16px;border-radius:16px}
+ .top>.iconbtn[aria-label="Sound"],.top>.iconbtn[aria-label="Notifications"]{width:27px;min-width:27px;font-size:20px}
+ .market-tabs{height:82px;align-items:center;padding:12px 15px;gap:8px}
+ .market-tabs button{font-size:15px;padding:12px 14px}
+ .chart-card{margin:13px 15px 10px;border-radius:18px}
+ .chart{height:286px}
+ .chart-head{padding:14px 16px}
+ .asset{font-size:16px;padding:10px 13px;border-radius:14px}
+ .price{font-size:12px}
+ .chart-label{font-size:12px;padding:6px 9px}
+ .chart-controls button{width:46px;height:46px;font-size:25px}
+ .digits{padding:12px 16px 17px;gap:7px}
+ .digit{min-width:52px;height:70px;font-size:18px}
+ .digit small{font-size:11px}
+ .tradebox{padding:10px 18px 24px}
+ .mode button{font-size:16px;padding:15px 8px}
+ .bottom{height:96px;padding:7px 25px calc(8px + env(safe-area-inset-bottom))}
+ .navitem{font-size:15px;gap:3px}
+ .navitem .navicon{font-size:24px}
+ .ai-orb{width:66px;height:66px;border-radius:21px}
+ .positions{min-height:calc(100dvh - 178px)}
+ .pos-tabs button{padding:17px 3px;font-size:14px}
+ .empty{padding:90px 18px}
+ .empty h2{font-size:20px}.empty p{font-size:15px}
+ .drawer{width:min(86%,380px)}
+ .drawer-head{height:76px;font-size:21px;padding:0 20px}
+ .profile{padding:22px;gap:16px}
+ .avatar{width:68px;height:68px;font-size:28px}
+ .profile strong{font-size:18px}
+ .menuitem{padding:17px 22px;font-size:16px;gap:15px}
+ .menuitem .mi{font-size:21px}
+ .modal{padding:22px 18px 22px;border-radius:23px 23px 0 0}
+ .modal-head{margin:-2px -18px 18px;padding:0 18px 16px}
+ .modal-head h2{font-size:21px}
+ .info{padding:16px;font-size:14px;line-height:1.6}
+ .fieldlabel{font-size:14px}
+ .select,.amount{font-size:16px;padding:14px}
+ .paymethod{padding:16px 14px;gap:14px}
+ .payicon{width:54px;height:54px;font-size:25px}
+ .paymethod strong{font-size:17px}.paymethod small{font-size:13px}
+ .primary{padding:16px;font-size:16px}.secondary{padding:15px;font-size:14px}
+}
+@media(max-width:370px){
+ .top{gap:5px;padding-left:8px;padding-right:8px}
+ .top #menuOpen,.top>.iconbtn[aria-label="Sound"],.top>.iconbtn[aria-label="Notifications"]{width:24px;min-width:24px}
+ .logo{width:40px;min-width:40px;height:46px}
+ .balance{font-size:12px;padding:3px}.balance .coin{width:25px;min-width:25px;height:36px}
+ .deposit{min-width:82px;padding:0 8px;font-size:14px}
+ .market-tabs button{font-size:13px;padding:10px 11px}
+}
+/* Light theme applies to every screen and overlay, not just the trading chart */
+body.light-theme{background:#e9edf5;color:#1c2434;color-scheme:light}
+body.light-theme .app{background:#f4f6fb;color:#1c2434}
+body.light-theme .top,body.light-theme .bottom{background:#fff;border-color:#dce2ed}
+body.light-theme .market-tabs{border-color:#dce2ed}
+body.light-theme .market-tabs button{color:#5d687d}
+body.light-theme .market-tabs button.active{background:#e7edf8;color:#1c2434;outline-color:#cbd5e5}
+body.light-theme .chart-card{background:#f7f9fd;border-color:#dce2ed}
+body.light-theme .asset,body.light-theme .chart-controls button,body.light-theme .digit,body.light-theme .risk div,body.light-theme .presets button{background:#e9eef7;border-color:#d4dceb;color:#26334b}
+body.light-theme .digit small,body.light-theme .price{color:#68758d}
+body.light-theme .mode{background:#e7ebf3;border-color:#d4dceb}
+body.light-theme .mode button{color:#65718a}
+body.light-theme .stake{background:#eef3fb;color:#1c2434}
+body.light-theme .stake input{color:#1c2434}
+body.light-theme .step{background:#e7ebf3;color:#45536d}
+body.light-theme .bottom .navitem{color:#66738c}
+body.light-theme .bottom .navitem.active{color:#347af0}
+body.light-theme .positions .pos-tabs{border-color:#dce2ed}
+body.light-theme .pos-tabs button{color:#65718a}
+body.light-theme .empty h2{color:#1c2434}
+body.light-theme .empty,body.light-theme .empty p{color:#65718a}
+body.light-theme .empty .target{background:#e2e8f2;color:#61708a}
+body.light-theme .drawer,body.light-theme .modal{background:#fff;color:#1c2434;border-color:#dce2ed}
+body.light-theme .drawer-head,body.light-theme .profile,body.light-theme .menuitem.logout,body.light-theme .modal-head{border-color:#e1e6ef}
+body.light-theme .profile p,body.light-theme .menuitem,body.light-theme .sub,body.light-theme .fieldlabel,body.light-theme .info,body.light-theme .muted-note{color:#68758d}
+body.light-theme .menuitem{color:#34415a}
+body.light-theme .menuitem .mi{color:#61708a}
+body.light-theme .info,body.light-theme .select,body.light-theme .amount{background:#f0f3f8;color:#26334b;border-color:#dce2ed}
+body.light-theme .info b{color:#1c2434}
+body.light-theme .paymethod{border-color:#dce2ed}
+body.light-theme .payicon{background:#e7edf8}
+body.light-theme .paymethod strong{color:#1c2434}
+body.light-theme .paymethod small{color:#68758d}
+body.light-theme .secure{border-color:#e1e6ef}
+body.light-theme .toast{background:#fff;color:#1c2434;border-color:#ccd5e4}
+body.light-theme .chart-label{background:#fff;color:#26334b}
+body.light-theme .presets button.active{background:#dce9ff;color:#2868d8;border-color:#8eb6f8}
+body.light-theme .risk .profit b{color:#159b68}
+body.light-theme .risk .loss b{color:#dc3b50}
+body.light-theme .risk .multi b{color:#a9780b}
+body.light-theme .chatlog{background:#f0f3f8;border-color:#dce2ed}
+body.light-theme .chatmsg:not(.mine){background:#e1e7f0;color:#26334b}
+body.light-theme .chatcomposer input{background:#f0f3f8;color:#1c2434;border-color:#dce2ed}
+.theme-switch:after{transition:transform .18s ease}
+.market-status{font-size:10px;color:#9aa5bb;margin-top:4px;display:flex;align-items:center;gap:5px}
+.market-status i{width:7px;height:7px;border-radius:50%;background:#e4a33b;display:inline-block}
+.market-status.live i{background:#20c66b;box-shadow:0 0 8px #20c66b}
+
 </style>
 </head>
 <body>
@@ -235,15 +344,30 @@ $('#scanBtn').onclick=()=>{let i=0;$('#scanBtn').disabled=true;$('#scanStatus').
 $('#botBtn').onclick=()=>toast('Scanner bot will be available after a verified data source is connected.');
 $('#balanceBtn').onclick=()=>toast('Demo wallet balance: $0.00');
 
+
+/* Persisted global appearance preference */
+const savedTheme=localStorage.getItem('novax-theme');
+if(savedTheme==='light')document.body.classList.add('light-theme');
+function syncThemeControl(){
+ const isLight=document.body.classList.contains('light-theme');
+ const label=$('#themeLabel'),switcher=$('#themeSwitch'),toggle=$('#themeToggle');
+ if(label)label.textContent=isLight?'Light theme':'Dark theme';
+ if(switcher){switcher.style.background=isLight?'#aab4c5':'#397ff0';switcher.style.transform=isLight?'scaleX(-1)':'none'}
+ if(toggle)toggle.setAttribute('aria-pressed',String(isLight));
+ document.querySelector('meta[name="theme-color"]').content=isLight?'#f4f6fb':'#171a27';
+}
+syncThemeControl();
+
 const themeToggle=$('#themeToggle');
 if(themeToggle){
   themeToggle.onclick=()=>{
     const light=document.body.classList.toggle('light-theme');
+    localStorage.setItem('novax-theme',light?'light':'dark');
     themeToggle.setAttribute('aria-pressed',String(light));
     $('#themeLabel').textContent=light?'Light theme':'Dark theme';
     $('#themeSwitch').style.background=light?'#aab4c5':'#397ff0';
     $('#themeSwitch').style.transform=light?'scaleX(-1)':'none';
-    document.querySelector('meta[name="theme-color"]').content=light?'#f4f6fb':'#171a27';
+    syncThemeControl();
   };
 }
 $('#liveChatOpen').onclick=()=>{close('menuVeil');open('chatVeil');$('#chatInput').focus()};
