@@ -89,6 +89,95 @@
   .market-tabs button{font-size:13px;padding:10px 11px}
 }
 
+
+/* Reference-fit mobile layout: keep the original screenshot proportions */
+@media(max-width:520px){
+  .top{height:82px;padding:9px 10px;gap:7px}
+  .top #menuOpen{width:28px;min-width:28px;font-size:22px}
+  .logo{width:44px;min-width:44px;height:52px;border-radius:16px;font-size:24px}
+  .balance{height:52px;flex:1;min-width:0;padding:4px 7px;gap:5px;font-size:14px;overflow:hidden}
+  .balance .coin{width:30px;min-width:30px;height:42px;border-radius:12px}
+  .balance>span:nth-child(2){white-space:nowrap}
+  .top>.iconbtn[aria-label="Sound"]{width:27px;min-width:27px;font-size:20px}
+  .deposit{height:52px;min-width:98px;padding:0 12px;font-size:16px;border-radius:16px}
+  .top>.iconbtn[aria-label="Notifications"]{width:27px;min-width:27px;font-size:21px}
+  .market-tabs{height:82px;align-items:center;padding:12px 15px}
+  .market-tabs button{font-size:15px;padding:12px 14px}
+  .chart-card{margin:13px 15px 10px;border-radius:18px}
+  .chart{height:286px}
+  .chart-head{padding:14px 16px}
+  .asset{font-size:16px;padding:10px 13px}
+  .price{font-size:12px}
+  .chart-label{font-size:12px;padding:6px 9px}
+  .chart-controls button{width:46px;height:46px;font-size:25px}
+  .digits{padding:12px 16px 17px;gap:7px}
+  .digit{min-width:52px;height:70px;font-size:18px}
+  .digit small{font-size:11px}
+  .tradebox{padding:10px 18px 24px}
+  .mode button{font-size:16px;padding:15px 8px}
+  .bottom{height:96px;padding:7px 25px calc(8px + env(safe-area-inset-bottom))}
+  .navitem{font-size:15px}
+  .navitem .navicon{font-size:24px}
+  .ai-orb{width:66px;height:66px;border-radius:21px}
+}
+@media(max-width:370px){
+  .top{gap:5px;padding-left:8px;padding-right:8px}
+  .top #menuOpen,.top>.iconbtn[aria-label="Sound"],.top>.iconbtn[aria-label="Notifications"]{width:24px;min-width:24px}
+  .logo{width:40px;min-width:40px;height:46px}
+  .balance{font-size:12px;padding:3px}
+  .balance .coin{width:25px;min-width:25px;height:36px}
+  .deposit{min-width:82px;padding:0 8px;font-size:14px}
+}
+/* Fully functional theme switch */
+body.light-theme{background:#e9edf5;color:#1c2434;color-scheme:light}
+body.light-theme .app{background:#f4f6fb;color:#1c2434}
+body.light-theme .top,body.light-theme .bottom{background:#fff;border-color:#dce2ed}
+body.light-theme .market-tabs{border-color:#dce2ed}
+body.light-theme .market-tabs button{color:#5d687d}
+body.light-theme .market-tabs button.active{background:#e7edf8;color:#1c2434;outline-color:#cbd5e5}
+body.light-theme .chart-card{background:#f7f9fd;border-color:#dce2ed}
+body.light-theme .asset,body.light-theme .chart-controls button,body.light-theme .digit,body.light-theme .risk div,body.light-theme .presets button{background:#e9eef7;border-color:#d4dceb;color:#26334b}
+body.light-theme .digit small,body.light-theme .price{color:#68758d}
+body.light-theme .mode{background:#e7ebf3;border-color:#d4dceb}
+body.light-theme .mode button{color:#65718a}
+body.light-theme .stake{background:#eef3fb;color:#1c2434}
+body.light-theme .stake input{color:#1c2434}
+body.light-theme .step{background:#e7ebf3;color:#45536d}
+body.light-theme .bottom .navitem{color:#66738c}
+body.light-theme .bottom .navitem.active{color:#347af0}
+body.light-theme .positions .pos-tabs{border-color:#dce2ed}
+body.light-theme .pos-tabs button{color:#65718a}
+body.light-theme .empty h2{color:#1c2434}
+body.light-theme .empty,.light-theme .empty p{color:#65718a}
+body.light-theme .empty .target{background:#e2e8f2;color:#61708a}
+body.light-theme .drawer,body.light-theme .modal{background:#fff;color:#1c2434;border-color:#dce2ed}
+body.light-theme .drawer-head,body.light-theme .profile,body.light-theme .menuitem.logout,.light-theme .modal-head{border-color:#e1e6ef}
+body.light-theme .profile p,body.light-theme .menuitem,body.light-theme .sub,body.light-theme .fieldlabel,body.light-theme .info,body.light-theme .muted-note{color:#68758d}
+body.light-theme .menuitem{color:#34415a}
+body.light-theme .menuitem .mi{color:#61708a}
+body.light-theme .info,body.light-theme .select,body.light-theme .amount{background:#f0f3f8;color:#26334b;border-color:#dce2ed}
+body.light-theme .info b{color:#1c2434}
+body.light-theme .paymethod{border-color:#dce2ed}
+body.light-theme .payicon{background:#e7edf8}
+body.light-theme .paymethod strong{color:#1c2434}
+body.light-theme .paymethod small{color:#68758d}
+body.light-theme .secure{border-color:#e1e6ef}
+body.light-theme .toast{background:#fff;color:#1c2434;border-color:#ccd5e4}
+body.light-theme .chart-label{background:#fff;color:#26334b}
+body.light-theme .presets button.active{background:#dce9ff;color:#2868d8;border-color:#8eb6f8}
+body.light-theme .risk .profit b{color:#159b68}
+body.light-theme .risk .loss b{color:#dc3b50}
+body.light-theme .risk .multi b{color:#a9780b}
+.chatlog{height:min(42vh,360px);overflow:auto;display:flex;flex-direction:column;gap:10px;padding:12px;background:var(--panel2);border:1px solid var(--line);border-radius:15px}
+.chatmsg{max-width:84%;padding:11px 13px;border-radius:14px;background:#2a3042;color:#f5f7fc;font-size:14px;line-height:1.45;overflow-wrap:anywhere}
+.chatmsg.mine{align-self:flex-end;background:#397ff0;color:#fff}
+.chatcomposer{display:flex;gap:8px;margin-top:12px}
+.chatcomposer input{min-width:0;flex:1;background:var(--panel2);border:1px solid var(--line);border-radius:13px;padding:13px;color:inherit}
+.chatcomposer button{background:#397ff0;border-radius:13px;padding:0 17px;font-weight:800}
+body.light-theme .chatlog{background:#f0f3f8;border-color:#dce2ed}
+body.light-theme .chatmsg:not(.mine){background:#e1e7f0;color:#26334b}
+body.light-theme .chatcomposer input{background:#f0f3f8;color:#1c2434;border-color:#dce2ed}
+
 </style>
 </head>
 <body>
@@ -118,10 +207,13 @@
 <section class="positions" id="positionsView"><div class="pos-tabs"><button class="active" data-pos="Open">Open (0)</button><button data-pos="Closed">Closed (0)</button><button data-pos="Transactions">Transactions</button></div><div id="posContent" class="empty"><div class="target">◎</div><h2>No open positions</h2><p>Your active trades will appear here</p></div></section>
 <nav class="bottom"><button class="navitem active" data-view="trade"><span class="navicon">▥</span>Trade</button><button class="navitem ai" id="aiOpen"><span class="ai-orb">✧</span>AI</button><button class="navitem" data-view="positions"><span class="navicon">◷</span>Positions</button></nav>
 </div>
-<div class="veil" id="menuVeil"><aside class="drawer"><div class="drawer-head"><button class="close" data-close="menuVeil">×</button>Menu <span style="font-size:18px;font-weight:500">🇬🇧 EN</span></div><div class="profile"><div class="avatar">N</div><div><strong>NovaX Trader</strong><p>Sign in to your account</p></div></div><button class="menuitem"><span class="mi">⚙</span>Account settings <span style="margin-left:auto">⌄</span></button><button class="menuitem" id="menuDeposit"><span class="mi">⊙</span>Deposit <span style="margin-left:auto">›</span></button><button class="menuitem"><span class="mi">⇧</span>Withdraw <span style="margin-left:auto">›</span></button><button class="menuitem" id="menuHistory"><span class="mi">◴</span>History <span style="margin-left:auto">›</span></button><button class="menuitem highlight"><span class="mi">♔</span>Refer & Earn</button><button class="menuitem"><span class="mi">☾</span>Dark theme <span class="toggle"></span></button><button class="menuitem"><span class="mi">ⓘ</span>Help Centre</button><button class="menuitem"><span class="mi">♢</span>Responsible Trading <span style="margin-left:auto">›</span></button><button class="menuitem"><span class="mi">▢</span>Live Chat</button><button class="menuitem logout"><span class="mi">⇥</span>Log out</button><p class="muted-note" style="padding:0 28px 24px">NovaX independent platform preview</p></aside></div>
+<div class="veil" id="menuVeil"><aside class="drawer"><div class="drawer-head"><button class="close" data-close="menuVeil">×</button>Menu <span style="font-size:18px;font-weight:500">🇬🇧 EN</span></div><div class="profile"><div class="avatar">N</div><div><strong>NovaX Trader</strong><p>Sign in to your account</p></div></div><button class="menuitem"><span class="mi">⚙</span>Account settings <span style="margin-left:auto">⌄</span></button><button class="menuitem" id="menuDeposit"><span class="mi">⊙</span>Deposit <span style="margin-left:auto">›</span></button><button class="menuitem"><span class="mi">⇧</span>Withdraw <span style="margin-left:auto">›</span></button><button class="menuitem" id="menuHistory"><span class="mi">◴</span>History <span style="margin-left:auto">›</span></button><button class="menuitem highlight"><span class="mi">♔</span>Refer & Earn</button><button class="menuitem" id="themeToggle" aria-pressed="false"><span class="mi">☾</span><span id="themeLabel">Dark theme</span><span class="toggle" id="themeSwitch"></span></button><button class="menuitem"><span class="mi">ⓘ</span>Help Centre</button><button class="menuitem"><span class="mi">♢</span>Responsible Trading <span style="margin-left:auto">›</span></button><button class="menuitem" id="liveChatOpen"><span class="mi">▢</span>Live Chat <span style="margin-left:auto">›</span></button><button class="menuitem logout"><span class="mi">⇥</span>Log out</button><p class="muted-note" style="padding:0 28px 24px">NovaX independent platform preview</p></aside></div>
 <div class="veil" id="aiVeil"><section class="modal"><div class="modal-head"><div style="display:flex;align-items:center;gap:16px"><div class="payicon">✧</div><h2>Entry Scanner</h2></div><button class="close" data-close="aiVeil">×</button></div><div class="info">Choose the market category you want to scan. The scanner will analyze available historical data and highlight patterns for review. <b>Signals are not guarantees of future results.</b></div><label class="fieldlabel">Market</label><select class="select"><option>Even / Odd</option><option>Matches / Differs</option><option>Over / Under</option><option>Rise / Fall</option></select><div class="scanrow"><span id="scanStatus">Ready to scan</span><b id="scanCount">0/13</b></div><div class="progress"><span id="scanProgress"></span></div><button class="primary" id="scanBtn">⌕ &nbsp; Deep Scan for Best Market</button><button class="secondary" id="botBtn">Load Deep Scanner Bot</button><p class="muted-note">Scanner is a UI prototype. Historical analysis and live signal sources are not connected yet.</p></section></div>
 <div class="veil" id="depositVeil"><section class="modal"><div class="modal-head"><div><h2>Deposit Funds</h2><p class="sub">Choose your payment method</p></div><button class="close" data-close="depositVeil">×</button></div><button class="paymethod" data-pay="M-Pesa"><span class="payicon">▣</span><span><strong>M-Pesa</strong><small>Mobile money</small></span><span class="arrow">↗</span></button><button class="paymethod" data-pay="USDT (TRC20)"><span class="payicon" style="color:#27b58a">₮</span><span><strong>USDT (TRC20)</strong><small>Cryptocurrency</small></span><span class="arrow">↗</span></button><button class="paymethod" data-pay="Card"><span class="payicon">▤</span><span><strong>Card</strong><small>Visa, Mastercard</small></span><span class="arrow">↗</span></button><div class="secure"><span>●</span> Secure &nbsp; <span>●</span> Provider confirmation required &nbsp; <span>●</span> Support</div></section></div>
 <div class="veil" id="payVeil"><section class="modal"><div class="modal-head"><div><h2 id="payTitle">Deposit</h2><p class="sub" id="paySub">Payment setup</p></div><button class="close" data-close="payVeil">×</button></div><label class="fieldlabel">Amount (USD)</label><input class="amount" id="payAmount" type="number" min="1" placeholder="Enter amount"><div id="phoneWrap"><label class="fieldlabel">Phone number (for M-Pesa)</label><input class="amount" id="phone" placeholder="+254 7XX XXX XXX"></div><p class="muted-note">This preview does not collect payment details or process deposits. A verified payment provider must be integrated before enabling real deposits.</p><button class="primary" id="continuePay">Continue</button></section></div>
+
+<div class="veil" id="chatVeil"><section class="modal"><div class="modal-head"><div><h2>NovaX Live Chat</h2><p class="sub">Support conversation</p></div><button class="close" data-close="chatVeil">×</button></div><p class="muted-note">Chat preview — messages stay in this browser session and are not sent to a support agent yet.</p><div class="chatlog" id="chatLog" aria-live="polite"><div class="chatmsg">Hello! Welcome to NovaX support. How can we help?</div></div><form class="chatcomposer" id="chatForm"><input id="chatInput" maxlength="500" autocomplete="off" placeholder="Type your message…" aria-label="Your message" required><button type="submit">Send</button></form></section></div>
+
 <div class="toast" id="toast"></div>
 <script>
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
@@ -141,6 +233,33 @@ $$('.paymethod').forEach(b=>b.onclick=()=>{close('depositVeil');$('#payTitle').t
 $('#continuePay').onclick=()=>toast('Payments are not enabled in this prototype. No money has been charged.');
 $('#scanBtn').onclick=()=>{let i=0;$('#scanBtn').disabled=true;$('#scanStatus').textContent='Scanning demo sample…';const timer=setInterval(()=>{i++;$('#scanCount').textContent=i+'/13';$('#scanProgress').style.width=(i/13*100)+'%';if(i>=13){clearInterval(timer);$('#scanStatus').textContent='Demo scan complete';$('#scanBtn').disabled=false;$('#scanBtn').textContent='Scan again';toast('Demo scan complete — no live signal source connected.')}},180)};
 $('#botBtn').onclick=()=>toast('Scanner bot will be available after a verified data source is connected.');
-$('#balanceBtn').onclick=()=>toast('Demo wallet balance: $0.00');updatePayout();
+$('#balanceBtn').onclick=()=>toast('Demo wallet balance: $0.00');
+
+const themeToggle=$('#themeToggle');
+if(themeToggle){
+  themeToggle.onclick=()=>{
+    const light=document.body.classList.toggle('light-theme');
+    themeToggle.setAttribute('aria-pressed',String(light));
+    $('#themeLabel').textContent=light?'Light theme':'Dark theme';
+    $('#themeSwitch').style.background=light?'#aab4c5':'#397ff0';
+    $('#themeSwitch').style.transform=light?'scaleX(-1)':'none';
+    document.querySelector('meta[name="theme-color"]').content=light?'#f4f6fb':'#171a27';
+  };
+}
+$('#liveChatOpen').onclick=()=>{close('menuVeil');open('chatVeil');$('#chatInput').focus()};
+$('#chatForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const input=$('#chatInput'), message=input.value.trim();
+  if(!message)return;
+  const bubble=document.createElement('div');
+  bubble.className='chatmsg mine';bubble.textContent=message;
+  $('#chatLog').appendChild(bubble);input.value='';
+  $('#chatLog').scrollTop=$('#chatLog').scrollHeight;
+  const reply=document.createElement('div');reply.className='chatmsg';
+  reply.textContent='Thanks for your message. This chat preview is working locally; connect a support inbox to receive and reply to messages from the NovaX team.';
+  $('#chatLog').appendChild(reply);$('#chatLog').scrollTop=$('#chatLog').scrollHeight;
+});
+
+updatePayout();
 </script>
 </body></html>
