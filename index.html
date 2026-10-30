@@ -287,6 +287,50 @@ body.light-theme .chatcomposer input{background:#f0f3f8;color:#1c2434;border-col
 .market-status i{width:7px;height:7px;border-radius:50%;background:#e4a33b;display:inline-block}
 .market-status.live i{background:#20c66b;box-shadow:0 0 8px #20c66b}
 
+
+/* Reference screenshot alignment: the supplied 691px-wide capture is a
+   compact app viewport, not the desktop layout. Keep the app edge-to-edge
+   through tablet widths and use the same compact type scale as the reference. */
+html,body{font-family:Roboto,"Helvetica Neue",Arial,sans-serif}
+@media(min-width:650px) and (max-width:760px){
+  .app{width:100%;max-width:100%;margin:0;border:0;border-radius:0;min-height:100dvh;padding-bottom:104px}
+  .top{height:76px;padding:9px 14px;gap:9px}
+  .top .iconbtn{width:34px;min-width:34px;height:42px;font-size:21px}
+  .logo{width:46px;min-width:46px;height:48px;border-radius:14px;font-size:22px}
+  .balance{height:48px;padding:5px 8px;gap:7px;font-size:14px;border-radius:13px}
+  .balance .coin{width:34px;min-width:34px;height:38px;border-radius:11px}
+  .deposit{height:48px;min-width:94px;padding:0 13px;font-size:15px;border-radius:13px}
+  .market-tabs{height:70px;padding:10px 14px;gap:7px}
+  .market-tabs button{padding:10px 13px;font-size:14px}
+  .chart-card{margin:11px 14px 9px;border-radius:16px}
+  .chart{height:270px}
+  .chart-head{padding:12px 14px}
+  .asset{padding:9px 11px;font-size:14px;border-radius:11px}
+  .digits{padding:10px 14px 14px;gap:6px}
+  .digit{min-width:0;height:62px;border-width:3px;font-size:16px}
+  .digit small{font-size:10px}
+  .tradebox{padding:9px 15px 20px}
+  .mode button{padding:12px 8px;font-size:14px}
+  .step{width:52px;height:54px}
+  .stake input{font-size:27px}
+  .presets button{padding:10px 2px;font-size:13px}
+  .risk div{padding:10px 6px}
+  .risk b{font-size:10px}
+  .risk strong{font-size:19px}
+  .trade-action{padding:15px 13px;border-radius:17px}
+  .trade-action strong{font-size:19px}
+  .bottom{bottom:0;width:100%;height:88px;border-radius:0;padding:6px 24px calc(6px + env(safe-area-inset-bottom))}
+  .navitem{font-size:13px;min-width:68px}
+  .navitem .navicon{font-size:23px}
+  .ai-orb{width:60px;height:60px;border-radius:19px;font-size:28px}
+  .positions{min-height:calc(100dvh - 164px)}
+  .empty{padding:90px 18px}
+}
+@media(min-width:761px){
+  .app{margin:18px auto;border:1px solid #30364a;border-radius:20px;min-height:calc(100dvh - 36px)}
+  .bottom{bottom:18px;border-radius:0 0 20px 20px}
+}
+
 </style>
 </head>
 <body>
